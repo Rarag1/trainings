@@ -1,0 +1,16 @@
+﻿int[] p1 = new int[3];
+int[] p2 = new int[3];
+Console.Write("Ведите координату X первой точки в 3D пространстве: ");
+int.TryParse(Console.ReadLine(), out p1[0]);
+Console.Write("Ведите координатУ Y первой точки в 3D пространстве: ");
+int.TryParse(Console.ReadLine(), out p1[1]);
+Console.Write("Ведите координатУ Z первой точки в 3D пространстве: ");
+int.TryParse(Console.ReadLine(), out p1[2]);
+Console.Write("Ведите координатУ X второй точки в 3D пространстве: ");
+int.TryParse(Console.ReadLine(), out p2[0]);
+Console.Write("Ведите координату Y второй точки в 3D пространстве: ");
+int.TryParse(Console.ReadLine(), out p2[1]);
+Console.Write("Ведите координату Z второй точки в 3D пространстве: ");
+int.TryParse(Console.ReadLine(), out p2[2]);
+double distance = Math.Sqrt(Math.Pow((p2[0] - p1[0]), 2) + Math.Pow((p2[1] - p1[1]), 2) + Math.Pow((p2[2] - p1[2]), 2));
+Console.WriteLine(Math.Round(distance, 2));
