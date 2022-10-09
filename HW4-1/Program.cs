@@ -10,5 +10,4 @@ int Degrees(int _num, int _degree)
     for (int i = 1; i < _degree; i++)
         _result = _result * _num;
     return _result;
-
 }
