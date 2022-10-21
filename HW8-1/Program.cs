@@ -49,12 +49,10 @@ double[,] FillArray(int m, int n, int k = 100)
 void PrintArray(double[,] _array)
 {
     Console.WriteLine();
-    for (int i = 0; i < array1.GetLength(0); i++)
+    for (int i = 0; i < _array.GetLength(0); i++)
     {
-        for (int j = 0; j < array1.GetLength(1); j++)
-        {
+        for (int j = 0; j < _array.GetLength(1); j++)
             Console.Write($"{_array[i, j]}  ");
-        }
         Console.WriteLine();
     }
 }
