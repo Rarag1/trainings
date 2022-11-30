@@ -12,16 +12,18 @@ def start():
         elif action == 'find':
             d_find1, d_find2 = front.find()
             base.read_file(f_name, f_type, d_find1, d_find2)
-        # elif action == 'delete':
-        #     d_find1, d_find2 = front.find()
-        #     result = base.read_file(f_name, f_type, d_find1, d_find2)
-        #     d_delete = front.delete(result)
-        #     if d_delete == 'Y': base.drop(f_name, f_type, d_find1, d_find2)
+        elif action == 'delete':
+            d_find1, d_find2 = front.find()
+            result = base.read_file(f_name, f_type, d_find1, d_find2)
+            d_delete = front.delete(result)
+            if d_delete == 'y': base.drop(f_name, f_type, d_find1, d_find2)
+        elif action == 'export':
+            fn_old, ft_old, f_name, f_type = front.export()
+            base.wright_file(fn_old, ft_old, f_name, f_type)
+    else: start()
 
-        # elif action == 'export':
-        #     front.export()
-    else:
-        start()
 
-    # data = base.read_file(d_base)
-    # front.action()
+def restart():
+    d_restart = front.ifrestart()
+    if d_restart == "y": start()
+    else: print("До новых встреч!")
