@@ -1,14 +1,20 @@
 from telegram import Update
 from telegram.ext import *
+from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
 import numpy as np
 import pandas as pd
 
+reply_keyboard = [['/geekbase', '/wright'],
+                  ['/find', '/delete']]
+markup1 = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=False)
+
 async def geekbase(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(f'Hello {update.effective_user.first_name}. Чего изволите?')
-    await update.message.reply_text(f'/input - введите имя файла.')
+    await update.message.reply_text(f'Hello {update.effective_user.first_name}. Чего изволите?', reply_markup=markup1)
+    await update.message.reply_text(f'/geekbase - введите имя файла.')
     msg = update.message.text.split()
     print(msg)
     file = msg[1]
+    print(file)
     await update.message.reply_text(f'/wright, /find, /delete - выберите действие.')
 
 async def wright(update: Update, context: ContextTypes.DEFAULT_TYPE):
