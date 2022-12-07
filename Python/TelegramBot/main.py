@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, ContextTypes
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
 import config
-# from apps import *
+from Calc import *
 from Game import *
 from GeekBase.GBfront import *
 
@@ -24,6 +24,12 @@ app.add_handler(CommandHandler("geekbase", geekbase))
 app.add_handler(CommandHandler("wright", wright))
 app.add_handler(CommandHandler("find", find))
 app.add_handler(CommandHandler("delete", delete))
+
+app.add_handler(CommandHandler("calc", calc))
+# app.add_handler(CommandHandler("add", add))
+# app.add_handler(CommandHandler("sub", sub))
+# app.add_handler(CommandHandler("mult", mult))
+# app.add_handler(CommandHandler("div", div))
 
 print('Server start')
 app.run_polling()

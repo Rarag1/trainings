@@ -1,8 +1,6 @@
 from telegram import Update
 from telegram.ext import *
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
-import numpy as np
-import pandas as pd
 from GeekBase.GBback import wright1, find1, delete1
 
 reply_keyboard = [['/geekbase', '/wright'],
