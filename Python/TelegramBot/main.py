@@ -8,13 +8,13 @@ from GeekBase.GBfront import *
 
 app = ApplicationBuilder().token(config.TOKEN).build()
 
-async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f'Hello {update.effective_user.first_name}', reply_markup=markup0)
 
 reply_keyboard = [['/game'], ['/geekbase'], ['/calc']]
 markup0 = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=False)
 
-app.add_handler(CommandHandler("hello", hello))
+app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("game", game))
 app.add_handler(CommandHandler("begin", begin))
 app.add_handler(CommandHandler("move", move))
