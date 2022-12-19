@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <h1>Калькулятор</h1>
+    <input type="text" id="val1" value="0">
+    <button onclick="calc(1)">+</button>
+    <button onclick="calc(2)">-</button>
+    <button onclick="calc(3)">*</button>
+    <button onclick="calc(4)">/</button>
+    <input type="text" id="val2" value="0">
+    =
+    <input type="text" id="result" readonly value="0">
+    <br><br>
+
+    <script>
+        function greeting() {
+            name = prompt("Как Вас зовут?")
+            alert(`Привет, ${name}! Посчитаем?`)
+        }
+        greeting()
+
+        function calc(param) {
+            var val1 = parseFloat(document.getElementById("val1").value);
+            var val2 = parseFloat(document.getElementById("val2").value);
+            if (val2 == 0) {
+                result = "Деление на ноль"
+            } else {
+                switch (param) {
+                    case param = 1: result = val1 + val2; break
+                    case param = 2: result = val1 - val2; break
+                    case param = 3: result = val1 * val2; break
+                    case param = 4: result = val1 / val2; break
+                }
+            }
+            // result = (val2 != 0) ? val1 / val2 : "Деление на ноль";
+            document.getElementById("result").value = result;
+        }
+    </script>
+</body>
+
+</html>
