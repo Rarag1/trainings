@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<basket>
+    <user>
+        <user id>111</user id>
+        <orders befor>12</orders befor>
+        <history>ссылка</history>
+        <address>Смоленск, т.2233332332</address>
+    </user>
+    <order>
+        <order number>222</order number>
+        <order>333</order>
+        <order sum>899</order sum>
+        <pay status>True</pay status>
+    </order>
+    <products>
+        <name>гамбургер</name>
+        <kod>1</kod>
+        <num>8</num>
+        <price>111</price>
+        <form>ingredients</form>
+        <ingredients>
+            <name>булочка для гамбургера</name>
+            <quantity>1</quantity>
+            <packing>8</packing>
+            <price>11</price>
+        </ingredients>
+        <ingredients>
+            <name>котлета для гамбургера</name>
+            <quantity>2</quantity>
+            <packing>4</packing>
+            <price>50</price>
+        </ingredients>
+        <ingredients>
+            <name>салат листовой</name>
+            <quantity>1</quantity>
+            <packing>8</packing>
+            <price>25</price>
+        </ingredients>
+        <ingredients>
+            <name>огурец порционный</name>
+            <quantity>1</quantity>
+            <packing>8</packing>
+            <price>25</price>
+        </ingredients>
+    </products>
+    <products>
+        <name>сыр порционный</name>
+        <kod>12</kod>
+        <quantity>1</quantity>
+        <packing>8</packing>
+        <price>11</price>
+        <form>штучный</form>
+    </products>
+</basket>
